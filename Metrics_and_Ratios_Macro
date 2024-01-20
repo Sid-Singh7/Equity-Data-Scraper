@@ -1,0 +1,331 @@
+Sub MetricsAndRatios()
+    Sheets.Add After:=Sheets(Sheets.Count)
+    ActiveWindow.DisplayGridlines = True
+    ActiveSheet.Name = "Metrics"
+    Range("A3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=CONCAT('Income Statement'!R[-1]C[1], "" "", ""Analysis"")"
+    Selection.Font.Bold = True
+    Range("A4").Select
+    ActiveCell.FormulaR1C1 = "YoY Growth"
+    Range("B3").Select
+    ActiveCell.FormulaR1C1 = "='Income Statement'!R[4]C"
+    Range("B3").Select
+    Selection.Copy
+    Range("C3:F3").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B3:F3").Select
+    Selection.Font.Bold = True
+    Range("B4").Select
+    ActiveCell.FormulaR1C1 = _
+        "=('Income Statement'!R[5]C-'Income Statement'!R[5]C[1])/'Income Statement'!R[5]C[1]"
+    Range("B4").Select
+    Selection.Copy
+    Range("C4:E4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B4:E4").Select
+    Selection.Style = "Percent"
+    Range("A5").Select
+    ActiveCell.FormulaR1C1 = "CAGR"
+    Range("B5").Select
+    ActiveCell.FormulaR1C1 = _
+        "=(('Income Statement'!R[4]C/'Income Statement'!R[4]C[4])^(1/COUNTA('Income Statement'!R[2]C:R[2]C[4])))-1"
+    Range("B5").Select
+    Selection.Style = "Percent"
+    Range("A6").Select
+    ActiveCell.FormulaR1C1 = "EPS"
+    Range("B6").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[27]C"
+    Range("B6").Select
+    Selection.Copy
+    Range("C6:F6").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("A7").Select
+    ActiveCell.FormulaR1C1 = "EPS Growth"
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = _
+        "=(R[-1]C-R[-1]C[1])/R[-1]C[1]"
+    Range("B7").Select
+    Selection.Copy
+    Range("C7:E7").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B7:E7").Select
+    Selection.Style = "Percent"
+    Range("A8").Select
+    ActiveCell.FormulaR1C1 = "Operating Income"
+    Range("B8").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[17]C"
+    Range("B8").Select
+    Selection.Copy
+    Range("C8:F8").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B8:F8").Select
+    Selection.NumberFormat = "$#,##0"
+    Range("A9").Select
+    ActiveCell.FormulaR1C1 = "Operating Profit Margin"
+    Range("B9").Select
+    ActiveCell.FormulaR1C1 = _
+        "=R[-1]C/'Income Statement'!RC"
+    Range("B9").Select
+    Selection.Copy
+    Range("C9:F9").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B9:F9").Select
+    Selection.Style = "Percent"
+    Range("A11").Select
+    ActiveCell.FormulaR1C1 = "Profitability Ratios"
+    Selection.Font.Bold = True
+    Range("A12").Select
+    ActiveCell.FormulaR1C1 = "Gross Profit Margin"
+    Range("B12").Select
+    ActiveCell.FormulaR1C1 = _
+        "=('Income Statement'!R[-3]C-'Income Statement'!R[-2]C)/'Income Statement'!R[-3]C"
+    Range("B12").Select
+    Selection.Copy
+    Range("C12:F12").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B12:F12").Select
+    Selection.Style = "Percent"
+    Range("A13").Select
+    ActiveCell.FormulaR1C1 = "Pretax Margin"
+    Range("B13").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[10]C/'Income Statement'!R[-4]C"
+    Range("B13").Select
+    Selection.Copy
+    Range("C13:F13").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B13:F13").Select
+    Selection.Style = "Percent"
+    Range("A14").Select
+    ActiveCell.FormulaR1C1 = "Net Profit Margin"
+    Range("B14").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[17]C/'Income Statement'!R[-5]C"
+    Range("B14").Select
+    Selection.Copy
+    Range("C14:F14").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B14:F14").Select
+    Selection.Style = "Percent"
+    Range("A15").Select
+    ActiveCell.FormulaR1C1 = "ROA"
+    Range("B15").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[16]C/AVERAGE('Balance Sheet'!R25C2:R25C6)"
+    Range("B15").Select
+    Selection.Copy
+    Range("C15:F15").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B15:F15").Select
+    Selection.Style = "Percent"
+    Range("A16").Select
+    ActiveCell.FormulaR1C1 = "ROE"
+    Range("B16").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[15]C/AVERAGE('Balance Sheet'!R46C2:R46C6)"
+    Range("B16").Select
+    Selection.Copy
+    Range("C16:F16").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B16:F16").Select
+    Selection.Style = "Percent"
+    Range("A18").Select
+    ActiveCell.FormulaR1C1 = "Activity Ratios"
+    Selection.Font.Bold = True
+    Range("A19").Select
+    ActiveCell.FormulaR1C1 = "Inventory Turnover"
+    Range("B19").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[-9]C/AVERAGE('Balance Sheet'!R13C2:R13C6)"
+    Range("B19").Select
+    Selection.Copy
+    Range("C19:F19").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B19:F19").Select
+    Selection.NumberFormat = "0.00"
+    Range("A20").Select
+    ActiveCell.FormulaR1C1 = "Days on Hand (DOH)"
+    Range("B20").Select
+    ActiveCell.FormulaR1C1 = _
+        "=365/R[-1]C"
+    Range("B20").Select
+    Selection.Copy
+    Range("C20:F20").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B20:F20").Select
+    Selection.NumberFormat = "0.00"
+    Range("A21").Select
+    ActiveCell.FormulaR1C1 = "Receivables Turnover"
+    Range("B21").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Income Statement'!R[-12]C/AVERAGE('Balance Sheet'!R12C2:R12C6)"
+    Range("B21").Select
+    Selection.Copy
+    Range("C21:F21").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B21:F21").Select
+    Selection.NumberFormat = "0.00"
+    Range("A22").Select
+    ActiveCell.FormulaR1C1 = "Days Sales Outstanding (DSO)"
+    Range("B22").Select
+    ActiveCell.FormulaR1C1 = _
+        "=365/R[-1]C"
+    Range("B22").Select
+    Selection.Copy
+    Range("C22:F22").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B22:F22").Select
+    Selection.NumberFormat = "0.00"
+    Range("A23").Select
+    ActiveCell.FormulaR1C1 = "Payables Turnover"
+    Range("B23").Select
+    ActiveCell.FormulaR1C1 = _
+        "=('Income Statement'!R[-13]C+'Balance Sheet'!R[-10]C-'Balance Sheet'!R[-10]C[1])/AVERAGE('Balance Sheet'!R26C2:R26C6)"
+    Range("B23").Select
+    Selection.Copy
+    Range("C23:E23").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B23:E23").Select
+    Selection.NumberFormat = "0.00"
+    Range("A24").Select
+    ActiveCell.FormulaR1C1 = "Days Payable"
+    Range("B24").Select
+    ActiveCell.FormulaR1C1 = _
+        "=365/R[-1]C"
+    Range("B24").Select
+    Selection.Copy
+    Range("C24:E24").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B24:E24").Select
+    Selection.NumberFormat = "0.00"
+    Range("A26").Select
+    ActiveCell.FormulaR1C1 = "Liquidity Ratios"
+    Selection.Font.Bold = True
+    Range("A27").Select
+    ActiveCell.FormulaR1C1 = "Current Ratio"
+    Range("B27").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Balance Sheet'!R[-12]C/'Balance Sheet'!R[4]C"
+    Range("B27").Select
+    Selection.Copy
+    Range("C27:F27").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B27:F27").Select
+    Selection.NumberFormat = "0.00"
+    Range("A28").Select
+    ActiveCell.FormulaR1C1 = "Quick Ratio"
+    Range("B28").Select
+    ActiveCell.FormulaR1C1 = _
+        "=('Balance Sheet'!R[-17]C+'Balance Sheet'!R[-16]C)/'Balance Sheet'!R[3]C"
+    Range("B28").Select
+    Selection.Copy
+    Range("C28:F28").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B28:F28").Select
+    Selection.NumberFormat = "0.00"
+    Range("A29").Select
+    ActiveCell.FormulaR1C1 = "Cash Ratio"
+    Range("B29").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Balance Sheet'!R[-18]C/'Balance Sheet'!R[2]C"
+    Range("B29").Select
+    Selection.Copy
+    Range("C29:F29").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B29:F29").Select
+    Selection.NumberFormat = "0.00"
+    Range("A30").Select
+    ActiveCell.FormulaR1C1 = "Cash Conversion Cycle"
+    Range("B30").Select
+    ActiveCell.FormulaR1C1 = _
+        "=R[-10]C+R[-8]C-R[-6]C"
+    Range("B30").Select
+    Selection.Copy
+    Range("C30:E30").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B30:E30").Select
+    Selection.NumberFormat = "0.00"
+    Range("A32").Select
+    ActiveCell.FormulaR1C1 = "Solvency Ratios"
+    Selection.Font.Bold = True
+    Range("A33").Select
+    ActiveCell.FormulaR1C1 = "Debt to Assets Ratio"
+    Range("B33").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Balance Sheet'!R[18]C/'Balance Sheet'!R[-8]C"
+    Range("B33").Select
+    Selection.Copy
+    Range("C33:F33").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B33:F33").Select
+    Selection.NumberFormat = "0.00"
+    Range("A34").Select
+    ActiveCell.FormulaR1C1 = "Debt to Capital Ratio"
+    Range("B34").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Balance Sheet'!R[17]C/('Balance Sheet'!R[17]C+'Balance Sheet'!R[12]C)"
+    Range("B34").Select
+    Selection.Copy
+    Range("C34:F34").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B34:F34").Select
+    Selection.NumberFormat = "0.00"
+    Range("A35").Select
+    ActiveCell.FormulaR1C1 = "Debt to Equity Ratio"
+    Range("B35").Select
+    ActiveCell.FormulaR1C1 = _
+        "='Balance Sheet'!R[16]C/'Balance Sheet'!R[11]C"
+    Range("B35").Select
+    Selection.Copy
+    Range("C35:F35").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("B35:F35").Select
+    Selection.NumberFormat = "0.00"
+    Range("A36").Select
+    ActiveCell.FormulaR1C1 = "Financial Leverage"
+    Range("B36").Select
+    ActiveCell.FormulaR1C1 = _
+        "=AVERAGE('Balance Sheet'!R[-11]C:R[-11]C[4])/AVERAGE('Balance Sheet'!R[10]C:R[10]C[4])"
+    Range("B36").Select
+    Selection.NumberFormat = "0.00"
+    Cells.Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Cells.EntireColumn.AutoFit
+End Sub
