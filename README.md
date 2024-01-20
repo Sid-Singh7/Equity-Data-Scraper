@@ -12,6 +12,7 @@ Balance Sheet Insights: Retrieve data on assets, liabilities, and equity, enabli
 ![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/ee7931f3-d4d6-4f6e-9293-62abaa12c544)
 
 Cash Flow Statement Retrieval: Understand the cash generated and used by an entity during a specific period, essential for assessing its liquidity and financial health.
+![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/7e68afcc-2e42-435c-b6ec-edd8236556c7)
 
 User-Friendly Python Interface: The project offers a straightforward Python interface, making it accessible for both beginners and experienced developers.
 
