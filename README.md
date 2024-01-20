@@ -14,3 +14,6 @@ Cash Flow Statement Retrieval: Understand the cash generated and used by an enti
 User-Friendly Python Interface: The project offers a straightforward Python interface, making it accessible for both beginners and experienced developers.
 
 Automated Metric and Ratio Macro: Provides key metrics and ratios used for financial analysis of the equity you have scraped data for.
+
+![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/400903ba-86b3-4ceb-9c7f-d2b39585097e)
+
