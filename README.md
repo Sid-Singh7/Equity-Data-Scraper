@@ -12,3 +12,5 @@ Balance Sheet Insights: Retrieve data on assets, liabilities, and equity, enabli
 Cash Flow Statement Retrieval: Understand the cash generated and used by an entity during a specific period, essential for assessing its liquidity and financial health.
 
 User-Friendly Python Interface: The project offers a straightforward Python interface, making it accessible for both beginners and experienced developers.
+
+Automated Metric and Ratio Macro: Provides key metrics and ratios used for financial analysis of the equity you have scraped data for.
