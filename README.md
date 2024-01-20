@@ -6,6 +6,8 @@ Features
 Versatile Equity Selection: Choose any equity you're interested in, and the tool will fetch its financial statements from reliable sources.
 
 Income Statement Extraction: Easily access detailed information on revenues, expenses, and profits, providing a comprehensive view of an entity's financial performance.
+![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/5ff73ae6-a34f-4710-8681-da08445a9a9d)
+
 
 Balance Sheet Insights: Retrieve data on assets, liabilities, and equity, enabling a thorough examination of an organization's financial position.
 
@@ -14,6 +16,5 @@ Cash Flow Statement Retrieval: Understand the cash generated and used by an enti
 User-Friendly Python Interface: The project offers a straightforward Python interface, making it accessible for both beginners and experienced developers.
 
 Automated Metric and Ratio Macro: Provides key metrics and ratios used for financial analysis of the equity you have scraped data for.
-
 ![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/400903ba-86b3-4ceb-9c7f-d2b39585097e)
 
