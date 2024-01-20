@@ -8,8 +8,8 @@ Versatile Equity Selection: Choose any equity you're interested in, and the tool
 Income Statement Extraction: Easily access detailed information on revenues, expenses, and profits, providing a comprehensive view of an entity's financial performance.
 ![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/5ff73ae6-a34f-4710-8681-da08445a9a9d)
 
-
 Balance Sheet Insights: Retrieve data on assets, liabilities, and equity, enabling a thorough examination of an organization's financial position.
+![image](https://github.com/Sid-Singh7/Equity-Data-Scraper/assets/40661217/ee7931f3-d4d6-4f6e-9293-62abaa12c544)
 
 Cash Flow Statement Retrieval: Understand the cash generated and used by an entity during a specific period, essential for assessing its liquidity and financial health.
 
